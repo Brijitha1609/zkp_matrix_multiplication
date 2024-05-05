@@ -1,28 +1,57 @@
 # Zero Knowledge Proof (ZKP) for Matrix Multiplication
 
-This repository contains Python code implementing a Zero Knowledge Proof (ZKP) scheme for matrix multiplication. The code demonstrates how a prover can convince a verifier that they know the product of two matrices \( A \) and \( B \) without revealing the matrices themselves.
+This repository contains a Python implementation of a Zero Knowledge Proof (ZKP) protocol for proving knowledge of matrix multiplication using cryptographic commitments.
 
-## Prerequisites
+## Overview
+
+The ZKP protocol implemented here demonstrates how a prover can convince a verifier that they know the product of two matrices (A and B) without revealing the matrices themselves. This is achieved through the use of commitment schemes and challenge-response interactions.
+
+## Dependencies
 
 - Python 3.x
-- Git
+- `petlib` library (for cryptographic operations)
 
-## How to Run
+1. Install `petlib` using pip:
 
-1. Clone the repository to your local machine:
+    pip install petlib
 
-    git clone https://github.com/your-username/zkp-matrix-multiplication.git
+------------------------------
+2. Implementation Details
+
+   - zkp_matrix_multiplication.py: Contains the implementation of the ZKP protocol for matrix multiplication.
+   - generate_random_matrix(rows, cols): Generates a random matrix.
+   - commit_matrix(matrix): Computes Pedersen commitments for a given matrix.
+   - prove_knowledge_of_product(A, B, A_commitment, B_commitment): Prover's function to prove knowledge of matrix product 𝐴 × 𝐵 A × B.
+   - verify_proof(A_commitment, B_commitment, r_C, challenge): Verifier's function to verify the prover's response.
+
+---------------------------------------
+
+How to Run :
+
+Step 1: Clone the Repository
+Clone the GitHub repository to your local machine using the following command:
+
+git clone https://github.com/your-username/zkp-matrix-multiplication.git
+
+Replace your-username with your actual GitHub username.
+
+Step 2: Navigate to the Repository Directory
+
+Navigate to the cloned repository directory using the following command:
+
+	cd zkp-matrix-multiplication
+
+Step 3: Run the Python Script
+
+Run the Python script using the following command:
 
 
-2. Navigate to the cloned repository directory:
+	python zkp_matrix_multiplication.py
 
-    cd zkp-matrix-multiplication
+Step 4: Review the Output
 
-
-3. Run the Python script:
-
-
-4. The script will generate random matrices \( A \) and \( B \), perform matrix multiplication \( A \times B \), and output the result along with the verification message.
+  The script will generate random matrices \( A \) and \( B \), perform matrix multiplication \( A times B \), and output the result along 
+  with the verification message.
 
 ## Expected Output
 
