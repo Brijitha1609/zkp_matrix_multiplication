@@ -18,31 +18,32 @@ The ZKP protocol implemented here demonstrates how a prover can convince a verif
 ------------------------------
 2. Implementation Details
 
-  Zero-Knowledge Proof Library (zkp_library.py)
+#### Zero-Knowledge Proof Library (zkp_library.py)
 This module provides functions to generate and verify zero-knowledge proofs for matrix multiplication using commitment schemes and hash functions.
 
-generate_proof(matrix_A, matrix_B):
-Generates a zero-knowledge proof for the multiplication of matrices matrix_A and matrix_B.
-Returns the commitment to matrix_A and matrix_B, a challenge, and the response.
-verify_proof(proof, matrix_A, matrix_B):
-Verifies the zero-knowledge proof for the multiplication of matrices matrix_A and matrix_B.
-Returns True if the proof is valid, False otherwise.
-commit_matrix(matrix):
-Computes the commitment to a given matrix.
-compute_response(matrix_A, matrix_B, commitment_A, commitment_B, challenge):
-Computes the response to a challenge.
-verify_response(matrix_A, matrix_B, commitment_A, commitment_B, challenge, response):
-Verifies the response to a challenge.
-generate_random_matrix(rows, cols):
-Generates a random matrix with the specified number of rows and columns.
-Matrix Multiplication Zero-Knowledge Proof Script (zkp_matrix_multiplication.py)
+##### generate_proof(matrix_A, matrix_B):
+- Generates a zero-knowledge proof for the multiplication of matrices matrix_A and matrix_B.
+- Returns the commitment to matrix_A and matrix_B, a challenge, and the response.
+- verify_proof(proof, matrix_A, matrix_B):
+- Verifies the zero-knowledge proof for the multiplication of matrices matrix_A and matrix_B.
+- Returns True if the proof is valid, False otherwise.
+##### commit_matrix(matrix):
+- Computes the commitment to a given matrix.
+- compute_response(matrix_A, matrix_B, commitment_A, commitment_B, challenge):
+- Computes the response to a challenge.
+##### verify_response(matrix_A, matrix_B, commitment_A, commitment_B, challenge, response):
+- Verifies the response to a challenge.
+##### generate_random_matrix(rows, cols):
+- Generates a random matrix with the specified number of rows and columns.
+#### Matrix Multiplication Zero-Knowledge Proof Script (zkp_matrix_multiplication.py)
 This script demonstrates the usage of the zero-knowledge proof library for multiple rounds of matrix multiplication.
 
-main():
-Defines parameters for multiple rounds of matrix multiplication.
-Generates random matrices for each round.
-Generates a zero-knowledge proof for each pair of matrices and verifies the proof.
-Prints the matrices, proof, proof generation time, proof verification time, and proof size in memory for each round.
+#### main():
+- Defines parameters for multiple rounds of matrix multiplication.
+- Generates random matrices for each round.
+- Generates a zero-knowledge proof for each pair of matrices and verifies the proof.
+- Prints the matrices, proof, proof generation time, proof verification time, and proof size in memory for each round.
+
 ---------------------------------------
 
 How to Run :
@@ -69,16 +70,17 @@ Run the Python script using the following command:
 
 Step 4: Review the Output
 
-  The script will generate random matrices \( A \) and \( B \), perform matrix multiplication \( A times B \), and output the result along 
-  with the verification message.
+  The script will generate random matrices \( A \) and \( B \) of different sizes in every round, perform matrix multiplication \( A times 
+  B \), and output the proof along with verification and also proof generation time, proof verification time, proof size in memory.
 
 ## Expected Output
 
 The output of the script should include the following:
 
+- In each round Matrices \( A \) and \( B \) are generated of different sizes.
+- Outputs generated proof.
 - Proof verification message indicating whether the prover's knowledge of the matrix product was successfully verified.
-- Matrices \( A \) and \( B \).
-- Matrix product \( A \times B \).
+- Outputs proof generation time, proof verification time, proof size in memory.
 
 Example output:
 
