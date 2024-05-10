@@ -9,14 +9,10 @@ The ZKP protocol implemented here demonstrates how a prover can convince a verif
 ## Dependencies
 
 - Python 3.x
-- `petlib` library (for cryptographic operations)
-
-1. Install `petlib` using pip:
-
-    pip install petlib
+- `hashlib ` library (for hashing)
 
 ------------------------------
-2. Implementation Details
+### Implementation Details
 
 #### Zero-Knowledge Proof Library (zkp_library.py)
 This module provides functions to generate and verify zero-knowledge proofs for matrix multiplication using commitment schemes and hash functions.
@@ -46,7 +42,7 @@ This script demonstrates the usage of the zero-knowledge proof library for multi
 
 ---------------------------------------
 
-How to Run :
+### How to Run :
 
 Step 1: Clone the Repository
 Clone the GitHub repository to your local machine using the following command:
