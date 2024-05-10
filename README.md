@@ -47,7 +47,7 @@ This script demonstrates the usage of the zero-knowledge proof library for multi
 Step 1: Clone the Repository
 Clone the GitHub repository to your local machine using the following command:
 
-git clone https://github.com/your-username/zkp-matrix-multiplication.git
+git clone https://github.com/Brijitha1609/zkp_matrix_multiplication
 
 Replace your-username with your actual GitHub username.
 
