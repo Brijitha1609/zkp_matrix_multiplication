@@ -41,7 +41,7 @@ def main():
         print(f"Proof verification time: {proof_verification_time:.6f} seconds")
 
         # Check size of proof in memory
-        proof_size = sys.getsizeof(proof)
+        proof_size = sum(sys.getsizeof(component) for component in proof)
         print(f"Proof size in memory: {proof_size} bytes\n")
 
 if __name__ == "__main__":
